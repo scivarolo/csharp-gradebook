@@ -10,7 +10,7 @@ namespace Gradebook {
             Name = name;
         }
 
-        public void AddLetterGrade(char letter)
+        public void AddGrade(char letter)
         {
             switch(letter)
             {
@@ -100,6 +100,14 @@ namespace Gradebook {
         }
 
         private List<double> grades;
-        public string Name;
+
+        public string Name
+        {
+            get;
+            private set;
+        }
+
+        public const string CATEGORY = "Science";
+
     }
 }
