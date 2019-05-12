@@ -104,7 +104,7 @@ namespace Gradebook {
         public string Name
         {
             get;
-            private set;
+            set;
         }
 
         public const string CATEGORY = "Science";
