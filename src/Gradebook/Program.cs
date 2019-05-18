@@ -8,7 +8,7 @@ namespace Gradebook
         static void Main(string[] args)
         {
 
-            var book = new InMemoryBook("Sebastian's Gradebook");
+            IBook book = new DiskBook("Sebastian's Gradebook");
             book.GradeAdded += OnGradeAdded;
 
             // prompt user to enter grades and loop until they type 'q' to stop
@@ -17,7 +17,6 @@ namespace Gradebook
 
             var stats = book.GetStatistics();
 
-            Console.WriteLine(InMemoryBook.CATEGORY);
             Console.WriteLine($"For the book named {book.Name}");
             Console.WriteLine($"The lowest grade is {stats.Low}");
             Console.WriteLine($"The highest grade is {stats.High}");
